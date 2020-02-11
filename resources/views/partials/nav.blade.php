@@ -15,6 +15,9 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li>
+                <a href="{{ route('users.edit') }}">My Account</a>
+                </li>
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">

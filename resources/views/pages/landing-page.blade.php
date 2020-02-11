@@ -1,11 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- <div > --}}
     {{-- <main class="py-4">
         @yield('content')
     </main> --}}
-
+<main class="py-5">
     <div id="app" class="container-fluid">
         <div class="container text-center">
             <div class="row justify-content-center">
@@ -27,8 +26,8 @@
             </div>
         </div>
     </div>
-
-{{-- </div> --}}
+</div>
+</main>
 @endsection
 
 @section('extra-js')

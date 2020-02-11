@@ -35,7 +35,7 @@
 
     @yield('content')
 
-    @include('partials.footer')
+    @include('partials.navbtm')
 
     @yield('extra-js')
 </body>

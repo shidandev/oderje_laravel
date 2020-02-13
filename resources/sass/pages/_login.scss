@@ -5,35 +5,10 @@
 .hero{
     height: 100%;
     width: 100%;
-    background-color: darkorange;
+    background-color: orangered;
     background-position: center;
     background-size: cover;
     position: absolute;
 }
-.form-box{
-    width: 300px;
-    height: 380px;
-    position: relative;
-    margin: 6% auto;
-    background-color: ghostwhite;
-    padding: 5px;
-}
-.oderje {
-  
-    background-image: linear-gradient, url('/public/img/oderje-logo-white.png');
-}
 
-.input-field{
-    width: 100%;
-    padding: 10px 0;
-    margin: 5px;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    border-bottom: 0 gray;
-    position: center;
-    outline: gray;
-}
-.submit-btn{
-    
-}
+

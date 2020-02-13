@@ -17,7 +17,7 @@ class ShopController extends Controller
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://app.oderje.com/api/package_product&function=get_list',
+        CURLOPT_URL => 'https://dev1.oderje.com/api/package_product&function=get_list',
         CURLOPT_RETURNTRANSFER => true,
         // CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
         // CURLOPT_USERPWD => 'ADMIN : SECRETE123',   <-----  for Basic Auth
@@ -35,11 +35,18 @@ class ShopController extends Controller
     $result = json_decode($response);
 
     $products = $result->list_product;
+    // $promo = $products['promotion_list'];
     // var_dump($products);
-    return view('pages.shop', compact('products'));
+    echo '<pre>';
+    print_r($result);
+    echo '</pre>';
+
+    return view('pages.shop', compact('result', 'products'));
 
     // return view('pages.shop', [
-    //     'products' => $result
+    //     // 'products' => $result
+    //     'products' => $products,
+    //     'promotion' => $promo
     // ]);
 
     }

@@ -9,7 +9,7 @@
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-md-8 mt-2">
-                    <img src="http://www.oderje.com/img/oderje-logo.png" class="img-fluid w-50 mt-5">
+                <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo.png" class="img-fluid w-50 mt-5"></a>
                 </div>
             </div>
             <div class="row justify-content-center mt-5">

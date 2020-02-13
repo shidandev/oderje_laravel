@@ -9,11 +9,11 @@
 
             <div class="col-md-8 mt-2 text-center">
 
-                <img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5">
+                <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5"></a>
                 <br>
                 <br>
                 <p class="text-right">
-                    <a class="text-light" href="http://127.0.0.1:8000/register">Not registered? Sign up here</a>
+                    <a class="text-light" href="{{ route('register') }}">Not registered? Sign up here</a>
                 </p>
 
             </div>
@@ -62,7 +62,7 @@
                             </div>
 
                             <div class="form-group row">
-                                
+
                                     <div class="col-md-6 offset-md-4 text-right">
 
                                         @if (Route::has('password.request'))
@@ -72,7 +72,7 @@
                                         @endif
 
                                     </div>
-                              
+
                             </div>
 
                             <div class="form-group row mb-0">

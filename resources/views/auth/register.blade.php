@@ -5,15 +5,15 @@
 <div class="container">
     <div class="row justify-content-center">
     <div class="col-md-8 mt-2 text-center">
-                <img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5">
+                <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5"></a>
                 <br>
                 <br>
-                <p class="text-right"><a class="text-light" href="http://127.0.0.1:8000/login">Already a member? Log In here</a>
+                <p class="text-right"><a class="text-light" href="{{ route('login') }}">Already a member? Log In here</a>
 </p>
             </div>
         <div class="col-md-8">
             <div class="card">
-              
+
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

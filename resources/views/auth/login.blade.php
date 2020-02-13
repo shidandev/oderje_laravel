@@ -33,7 +33,7 @@
 
                                 <div class="col-md-6">
 
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="username" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Enter here">
 
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -51,7 +51,7 @@
                                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password:') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Enter here">
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -79,7 +79,7 @@
 
                                 <div class="col-md-8 offset-md-4 center">
 
-                                    <button type="submit" class="btn btn-primary">
+                                    <button  type="button" class="btn btn-primary login_btn">
                                         {{ __('Log In') }}
                                     </button>
 
@@ -88,7 +88,28 @@
                             </div>
 
                         </form>
+                        <script>
 
+                            $(document).ready(function(){
+                                $(".login_btn").on("click",function(){
+
+                                var username = $("#username").val().trim();
+                                var password = $("#password").val().trim();
+
+                                $.post("https://app.oderje.com/api/customer",
+                                {
+                                    function:"login",
+                                    username:username,
+                                    pass:password
+                                },
+                                function(data){
+                                 console.log(data);
+                                },"json");
+
+                            });
+
+                            });
+                        </script>
                     </div>
 
                 </div>

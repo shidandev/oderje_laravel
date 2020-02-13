@@ -8,7 +8,7 @@
                 <img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5">
                 <br>
                 <br>
-                <p class="text-right"><a class="text-light" href="http://127.0.0.1:8000/login">Already a member? Log In here</a>
+                <p class="text-right"><a class="text-light" href="login">Already a member? Log In here</a>
 </p>
             </div>
         <div class="col-md-8">

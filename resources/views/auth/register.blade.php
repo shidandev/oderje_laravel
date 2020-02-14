@@ -1,86 +1,131 @@
 @extends('layouts.app')
 
 @section('content')
+
 <main class="py-4 hero">
 <div class="container">
     <div class="row justify-content-center">
-    <div class="col-md-8 mt-2 text-center">
+    <div class="col-md-9 mt-2 text-center">
                 <img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5">
-                <br>
-                <br>
-                <p class="text-right"><a class="text-light" href="login">Already a member? Log In here</a>
-</p>
-            </div>
-        <div class="col-md-8">
+    </div>
+                <div class="col-md-9  text-left">
+                    <br>
+                <p class="text-right">
+                    <a class="text-light" href="login">Already a member? Log In here</a>
+</p>            
+                </div>
+                <div class="col-md-9 text-center">
+                </div>
+        <div class="col-md-9 center">
             <div class="card">
               
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+<div class="form-row">
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name:') }}</label>
+                        <div class="form-group col md-3">
+                            <label for="email" class="text-right">{{ __('E-Mail address') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address:') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Enter here">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                           
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password:') }}</label>
+                        <div class="form-group col md-3">
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <label for="number" class="text-right">{{ __('Phone number') }}</label>
+
+                            <div class="input-group-prepend">
+
+                                <div class="input-group-text">+6</div>
+                             
+                                <input id="email" type="text" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number') }}" required autocomplete="number" placeholder="Enter here">
+
+                                @error('number')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                            </div>
+                           
+                        </div>
+</div>
+<div class="form-row">
+                        <div class="form-group col md-3">
+
+                            <label for="password" class="text-right">{{ __('Password') }}</label>
+                            
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Enter here">
+                              
+                                <input type="checkbox" onclick="myFunction()"> Show Password
+                                <script>
+                                    function myFunction() {
+                                      var x = document.getElementById("password");
+                                      if (x.type === "password") {
+                                        x.type = "text";
+                                      } else {
+                                        x.type = "password";
+                                      }
+                                    }
+                                    </script>
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                          
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password:') }}</label>
+                        <div class="form-group col md-3">
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
+                            <label for="password-confirm" class="text-right">{{ __('Confirm Password') }}</label>
+                           
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Enter here" width="5">
+                               
+                                <input type="checkbox" onclick="myFunction()"> Show Password
+                                <script>
+                                    function myFunction() {
+                                      var x = document.getElementById("password-confirm");
+                                      if (x.type === "password") {
+                                        x.type = "text";
+                                      } else {
+                                        x.type = "password";
+                                      }
+                                    }
+                                    </script>
                         </div>
+</div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="form-group text-center">
+                           
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Sign Up') }}
                                 </button>
-                            </div>
+                            
                         </div>
+
                     </form>
+
                 </div>
+
             </div>
+
+
         </div>
+
     </div>
+
 </div>
+
 </main>
+
 @endsection

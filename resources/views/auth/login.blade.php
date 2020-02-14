@@ -9,12 +9,11 @@
 
             <div class="col-md-9 mt-2 text-center">
 
-                <img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5" href="/">
-            </div>
-            <div class="col-md-5  text-left">
+                <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5"></a>
+                <br>
                 <br>
                 <p class="text-right">
-                    <a class="text-light" href="register">Not registered? Sign up here</a>
+                    <a class="text-light" href="{{ route('register') }}">Not registered? Sign up here</a>
                 </p>
 
             </div>
@@ -73,9 +72,9 @@
                                 
                             </div>
 
-                            <div class="form-group">
-                                
-                                    <div class="text-right">
+                            <div class="form-group row">
+
+                                    <div class="col-md-6 offset-md-4 text-right">
 
                                         @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
@@ -84,7 +83,7 @@
                                         @endif
 
                                     </div>
-                              
+
                             </div>
 
                             <div class="form-group text-center">
@@ -100,10 +99,10 @@
 
                         </form>
                         <script>
-                        
+
                             $(document).ready(function(){
                                 $(".login_btn").on("click",function(){
-                
+
                                 var username = $("#username").val().trim();
                                 var password = $("#password").val().trim();
 

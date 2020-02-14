@@ -5,20 +5,15 @@
 <main class="py-4 hero">
 <div class="container">
     <div class="row justify-content-center">
-    <div class="col-md-9 mt-2 text-center">
-                <img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5">
-    </div>
-                <div class="col-md-9  text-left">
-                    <br>
-                <p class="text-right">
-                    <a class="text-light" href="login">Already a member? Log In here</a>
-</p>            
-                </div>
-                <div class="col-md-9 text-center">
-                </div>
-        <div class="col-md-9 center">
+    <div class="col-md-8 mt-2 text-center">
+                <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5"></a>
+                <br>
+                <br>
+                <p class="text-right"><a class="text-light" href="{{ route('login') }}">Already a member? Log In here</a></p>
+            </div>
+        <div class="col-md-8">
             <div class="card">
-              
+
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

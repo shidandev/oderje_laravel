@@ -35,19 +35,19 @@ class ShopController extends Controller
     $result = json_decode($response);
 
     $products = $result->list_product;
+    // $productsArr = (array) $productsObj;
     // $promo = $products['promotion_list'];
     // var_dump($products);
-    echo '<pre>';
-    print_r($result);
-    echo '</pre>';
+    // echo '<pre>';
+    // print_r($products);
+    // echo '</pre>';
 
-    return view('pages.shop', compact('result', 'products'));
+    // return view('pages.shop', compact('result', 'products'));
 
-    // return view('pages.shop', [
-    //     // 'products' => $result
-    //     'products' => $products,
-    //     'promotion' => $promo
-    // ]);
+    return view('pages.shop', [
+        'products' => $products,
+        // 'products'=>$result
+    ]);
 
     }
 

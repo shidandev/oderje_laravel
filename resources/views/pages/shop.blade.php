@@ -6,10 +6,11 @@
 
 <div class="container-fluid">
     <div class="container">
-        <ul class="list-group list-group-flush mt-5 ">
+        <ul class="list-group list-group-vertical mt-5 ">
             @foreach ($products as $product)
             <li class="list-group-item mt-1 shadow-sm">
-                <img src="https://dev1.oderje.com/images/product/{{$product->p_image}}" alt="">
+                <img class="img-thumbnail float-left" src="https://dev1.oderje.com/images/product/{{$product->p_image}}"
+                    alt="">
                 <p>Name : {{$product->p_name}}</p>
                 <p>Price : RM{{$product->p_price}}</p>
 

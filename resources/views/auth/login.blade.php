@@ -7,20 +7,12 @@
 
         <div class="row justify-content-center">
 
-            <div class="col-md-8 mt-2 text-center">
+            <div class="col-md-9 mt-2 text-center">
 
-                <<<<<<< HEAD <a href="{{ route('landing-page') }}"><img
-                        src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5"></a>
-                    <br>
-                    <br>
-                    =======
-                    <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo-2.png"
-                            class="img-fluid w-50 mt-5"></a>
-            </div>
-
-            <div class="col-md-5  text-left">
+                <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo-2.png"
+                        class="img-fluid w-50 mt-5"></a>
                 <br>
-                >>>>>>> 15b46a1c69052c6eb69c06ad014756739e352d5b
+                <br>
                 <p class="text-right">
                     <a class="text-light" href="{{ route('register') }}">Not registered? Sign up here</a>
                 </p>
@@ -60,8 +52,6 @@
                                 <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
                                     required autocomplete="new-password" placeholder="Enter here">
-
-                                {{-- script for forget password --}}
                                 <input type="checkbox" onclick="myFunction()"> Show Password
                                 <script>
                                     function myFunction() {
@@ -84,29 +74,23 @@
 
                             <div class="form-group row">
 
-                                <<<<<<< HEAD <div class="col-md-6 offset-md-4 text-right">
-                                    =======
-                                    <div class="text-right">
-                                        >>>>>>> 15b46a1c69052c6eb69c06ad014756739e352d5b
+                                <div class="col-md-6 offset-md-4 text-right">
 
-                                        @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Password?') }}
-                                        </a>
-                                        @endif
+                                    @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Password?') }}
+                                    </a>
+                                    @endif
 
-                                    </div>
+                                </div>
 
                             </div>
 
                             <div class="form-group text-center">
 
-
-
                                 <button type="button" class="btn btn-primary login_btn">
                                     {{ __('Log In') }}
                                 </button>
-
 
                             </div>
 

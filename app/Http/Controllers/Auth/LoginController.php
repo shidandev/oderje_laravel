@@ -36,5 +36,19 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+
     }
+
+    public function login()
+    {
+        $username = strtolower(Input::get('username'));
+        $password = Input::get('password');
+
+        if (Auth::attempt(['username' => $username, 'password' => $password])) {
+            return Redirect::to('/shop')->with('success', 'Hi '. $username .'! You have been successfully logged in.');
+        } else {
+            return Redirect::to('/')->with('error', 'Username/Password Wrong')->withInput(Request::except('password'))->with('username', $username);
+        }
+    }
+
 }

@@ -4,7 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use GuzzleHttp\Client;
+use GuzzleHttp\Cookie\CookieJar;
+
 
 class LoginController extends Controller
 {
@@ -37,18 +41,6 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
 
-    }
-
-    public function login()
-    {
-        $username = strtolower(Input::get('username'));
-        $password = Input::get('password');
-
-        if (Auth::attempt(['username' => $username, 'password' => $password])) {
-            return Redirect::to('/shop')->with('success', 'Hi '. $username .'! You have been successfully logged in.');
-        } else {
-            return Redirect::to('/')->with('error', 'Username/Password Wrong')->withInput(Request::except('password'))->with('username', $username);
-        }
     }
 
 }

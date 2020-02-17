@@ -33,7 +33,7 @@
 
                                 <label for="email" class="text-right">{{ __('E-Mail Address / Phone Number') }}</label>
 
-                                <input id="username" type="email"
+                                <input id="username" name="username" type="email"
                                     class="form-control @error('email') is-invalid @enderror" name="email"
                                     value="{{ old('email') }}" required autocomplete="email" placeholder="Enter here">
 
@@ -49,7 +49,7 @@
                                 <label for="password" class="text-right">{{ __('Password') }}</label>
 
 
-                                <input id="password" type="password"
+                                <input id="password" name="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
                                     required autocomplete="new-password" placeholder="Enter here">
                                 <input type="checkbox" onclick="myFunction()"> Show Password
@@ -88,14 +88,14 @@
 
                             <div class="form-group text-center">
 
-                                <button type="button" class="btn btn-primary login_btn">
+                                <button type="submit" class="btn btn-primary login_btn auth-button">
                                     {{ __('Log In') }}
                                 </button>
 
                             </div>
 
                         </form>
-                        <script>
+                        {{-- <script>
                             $(document).ready(function () {
                                 $(".login_btn").on("click", function () {
 
@@ -115,7 +115,7 @@
 
                             });
 
-                        </script>
+                        </script> --}}
                     </div>
 
                 </div>

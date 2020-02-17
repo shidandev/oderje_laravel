@@ -24,10 +24,5 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-
-        // The code below sets up the 'api' driver
-        $this->app['auth']->extend('api', function() {
-            return new \App\Auth\ApiUserProvider();
-        });
     }
 }

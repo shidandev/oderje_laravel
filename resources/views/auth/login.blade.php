@@ -7,11 +7,13 @@
 
         <div class="row justify-content-center">
 
-            <div class="col-md-9 mt-2 text-center">
+            <div class="col-md-8 mt-2 text-center">
 
                 <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5"></a>
-                <br>
-                <br>
+            </div>
+           
+        <div class="col-md-5  text-left">
+<br>
                 <p class="text-right">
                     <a class="text-light" href="{{ route('register') }}">Not registered? Sign up here</a>
                 </p>
@@ -53,6 +55,8 @@
 
                                 
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Enter here">
+                                    
+                                    {{-- script for forget password --}}
                                     <input type="checkbox" onclick="myFunction()"> Show Password
                                     <script>
                                         function myFunction() {
@@ -74,7 +78,7 @@
 
                             <div class="form-group row">
 
-                                    <div class="col-md-6 offset-md-4 text-right">
+                                    <div class="text-right">
 
                                         @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">

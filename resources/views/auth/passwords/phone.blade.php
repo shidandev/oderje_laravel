@@ -32,20 +32,20 @@
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
 
-                        <div class="form-group">
-                            <label for="number" class="text-right">{{ __('Your registered e-mail address') }}</label>
+                        <div class="form-group col md-3">
 
-                                <input id="number" type="text" class="form-control @error('number') is-invalid @enderror" name="number" value="{{ old('number') }}" required autocomplete="phone number" autofocus>
+                            <label for="number" class="text-right">{{ __('Phone number') }}</label>
+                            <div class="input-group mb-3">
+                            <div class="input-group-prepend">
 
-                                @error('number')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <span class="input-group-text">+6</span>
+                            </div>
+                                <input id="numeric" type="text" class="form-control" required autocomplete="number" placeholder="Enter here">
+
                             </div>
                             <div class="form-group">
                                 <p class="text-center">
-                                    <a href="{{ route('phone') }}">Use mobile phone instead</a>
+                                    <a href="{{ route('email') }}">Use e-mail instead</a>
                                 </p>
                             </div>
                         </div>

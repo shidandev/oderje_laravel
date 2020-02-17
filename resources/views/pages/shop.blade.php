@@ -4,25 +4,27 @@
 
 @section('content')
 
-<div class="container-fluid">
+<div class="container-fluid mt-5">
     <div class="container">
-        <ul class="list-group list-group-vertical mt-5 ">
+        <div class="row text-center text-lg-left">
             @foreach ($products as $product)
-            <li class="list-group-item mt-1 shadow-sm">
-                <img class="img-thumbnail float-left" src="https://dev1.oderje.com/images/product/{{$product->p_image}}"
-                    alt="">
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-120">
+                    <img class="img-fluid img-thumbnail"
+                        src="https://dev1.oderje.com/images/product/{{$product->p_image}}" alt="">
+                </a>
                 <p>Name : {{$product->p_name}}</p>
-                <p>Price : RM{{$product->p_price}}</p>
-
-                @foreach ((array)$product->promotion_list as $promo)
-                {{$promo->PROMO_ID}}
-                @endforeach
-            </li>
-
+                <p>Price : {{'RM'.number_format($product->p_price / 100, 2)}}</p>
+            </div>
             @endforeach
-        </ul>
+        </div>
     </div>
 </div>
 @endsection
 
 @include('partials.navbtm')
+
+@section('extra-js')
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
+@endsection

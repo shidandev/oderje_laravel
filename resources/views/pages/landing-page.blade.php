@@ -6,7 +6,7 @@
 {{-- <main class="py-4">
         @yield('content')
     </main> --}}
-<main class="py-5">
+<main class="py-5 mt-5">
     <div id="app" class="container-fluid">
         <div class="container text-center">
             <div class="row justify-content-center">

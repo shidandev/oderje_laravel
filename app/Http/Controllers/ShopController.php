@@ -42,12 +42,12 @@ class ShopController extends Controller
     // print_r($products);
     // echo '</pre>';
 
-    // return view('pages.shop', compact('result', 'products'));
+    return view('pages.shop', compact('products'));
 
-    return view('pages.shop', [
-        'products' => $products,
-        // 'products'=>$result
-    ]);
+    // return view('pages.shop', [
+    //     'products' => $products,
+    //     // 'products'=>$result
+    // ]);
 
     }
 

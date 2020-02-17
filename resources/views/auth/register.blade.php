@@ -36,7 +36,7 @@
                                     @enderror
 
                                 </div>
-
+                                <div>test2x</div>
                                 <div class="form-group col md-3">
 
                                     <label for="number" class="text-right">{{ __('Phone number') }}</label>

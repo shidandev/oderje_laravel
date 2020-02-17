@@ -43,11 +43,11 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <p class="text-center">
-                                    <a href="{{ route('phone') }}">Use mobile phone instead</a>
+                                    <a href="">Use mobile phone instead</a>
                                 </p>
-                            </div>
+                            </div> --}}
                         </div>
                     
 

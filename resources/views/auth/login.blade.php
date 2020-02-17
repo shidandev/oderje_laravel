@@ -7,21 +7,20 @@
 
         <div class="row justify-content-center">
 
-            <div class="col-md-8 mt-2 text-center">
+            <div class="col-md-7 mt-2 text-center">
 
                 <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo-2.png" class="img-fluid w-50 mt-5"></a>
             </div>
            
-        <div class="col-md-5  text-left">
-<br>
+        <div class="col-md-7 text-left">
+
                 <p class="text-right">
                     <a class="text-light" href="{{ route('register') }}">Not registered? Sign up here</a>
                 </p>
 
             </div>
-<div class="col-md-9 text-center">
-</div>
-            <div class="col-md-5">
+
+            <div class="col-md-7">
 
                 <div class="card">
 

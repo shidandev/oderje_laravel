@@ -1,14 +1,17 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
-@import 'abstracts/variables';
+@import "abstracts/variables";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Components
+@import "components/media";
 
 // Pages
-@import 'pages/login';
+@import "pages/login";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import "~bootstrap/scss/bootstrap";
 
 // Font Awesome
-@import '~@fortawesome/fontawesome-free/scss/solid';
+@import "~@fortawesome/fontawesome-free/scss/solid";

@@ -26,8 +26,15 @@
                             </button>
                         </div>
                     </div>
-                    <div class="form-group row">
+                  
                         
+                        <div class="grid-container mt-3">
+                            <button class="btn"><i class="fas fa-utensils"></i> FOOD</button>
+                            <button class="btn"><i class="fas fa-coffee"></i> DRINKS</button>
+                            <button class="btn"><i class="fas fa-tshirt"></i> FASHION</button>
+                            <button class="btn"><i class="fas fa-mobile-alt"></i> GADJET</button>
+                            <button class="btn"><i class="fas fa-heartbeat"></i> HEALTH</button>                    
+                    
                     </div>
                 </div>
             </div>

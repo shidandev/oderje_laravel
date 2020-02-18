@@ -12,7 +12,7 @@
     <title>{{ config('app.name', 'Oderje') }}</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/favicon.ico')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/oderje-favicon.png')}}">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- Fonts -->
@@ -37,6 +37,7 @@
 <body>
 
     @yield('content')
+
 
     @yield('extra-js')
 </body>

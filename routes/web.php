@@ -45,10 +45,13 @@ Route::get('/search', 'ShopController@search')->name('search');
     // Route::get('/wallet', 'WalletController@index')->name('wallet.index');
 //});
 
+
 Auth::routes();
+Route::post('/login', 'CustomLoginController@postLogin')->name('login');
+
 
 // Authentication Routes...
-// Route::get('login', 'Auth\CustomLoginController@showLoginForm')->name('login');
+// Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 // Route::post('login', 'Auth\CustomLoginController@authenticate')->name('login.user');
 // Route::post('logout', 'Auth\CustomLoginController@logout')->name('logout');
 

@@ -20,7 +20,8 @@ Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
 //Search
-Route::get('/search', 'ShopController@search')->name('search');
+Route::get('/search', 'SearchController@index')->name('search');
+Route::post('/search', 'SearchController@search')->name('search.show');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 

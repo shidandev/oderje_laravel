@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Product;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -13,42 +12,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-
-    $curl = curl_init();
-
-    curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://app.oderje.com/api/package_product&function=get_list',
-        CURLOPT_RETURNTRANSFER => true,
-        // CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
-        // CURLOPT_USERPWD => 'ADMIN : SECRETE123',   <-----  for Basic Auth
-        // CURLOPT_TIMEOUT => 30,
-        CURLOPT_CUSTOMREQUEST => "GET",
-        CURLOPT_HTTPHEADER => array(
-            "cache-control: no-cache",
-        ),
-    ));
-
-    $response = curl_exec($curl);
-
-    curl_close($curl);
-
-    $result = json_decode($response);
-
-    $products = $result->list_product;
-    // $productsArr = (array) $productsObj;
-    // $promo = $products['promotion_list'];
-    // var_dump($products);
-    // echo '<pre>';
-    // print_r($products);
-    // echo '</pre>';
-
-    return view('pages.shop', compact('products'));
-
-    // return view('pages.shop', [
-    //     'products' => $products,
-    //     // 'products'=>$result
-    // ]);
-
+        //
     }
 
     /**

@@ -9,7 +9,7 @@
 
             <div class="col-md-9 mt-2 text-center">
 
-                <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo-2.png"
+                <a href="{{ route('landing-page') }}"><img src="{{asset('img/oderje-logo-2.png')}}"
                         class="img-fluid w-50 mt-5"></a>
                 <br>
                 <br>

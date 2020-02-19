@@ -12,7 +12,7 @@
     <title>{{ config('app.name', 'Oderje') }}</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/oderje-favicon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/oderje-favicon.png') }}">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- Fonts -->
@@ -23,22 +23,26 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- Font Awesome 5 icon-->
     <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css')}}">
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <script src="{{asset('js/popper.min.js')}}"></script>
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-
-
     @yield('extra-css')
-</head>
 
+</head>
 <body>
+
+    @include('partials.nav')
 
     @yield('content')
 
+    @include('partials.navbtm')
 
+
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
     @yield('extra-js')
 </body>
 

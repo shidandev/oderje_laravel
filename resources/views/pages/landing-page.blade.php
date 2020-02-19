@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@include('partials.nav')
-
 @section('content')
 {{-- <main class="py-4">
         @yield('content')
@@ -11,7 +9,7 @@
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-md-8 mt-2">
-                    <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo.png"
+                <a href="{{ route('landing-page') }}"><img src="{{ asset('img/oderje-logo.png') }}"
                             class="img-fluid w-50 mt-5"></a>
                 </div>
             </div>
@@ -27,7 +25,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        
+
                     </div>
                 </div>
             </div>
@@ -36,8 +34,6 @@
     </div>
 </main>
 @endsection
-
-@include('partials.navbtm')
 
 @section('extra-js')
 <!-- Scripts -->

@@ -1,28 +1,34 @@
 @extends('layouts.app')
 
-@include('partials.nav')
-
 @section('content')
 
 <div class="container-fluid mt-5">
     <div class="container">
-        <div class="row text-center text-lg-left">
+        <div class="row text-sm-left">
             @foreach ($products as $product)
-            <div class="col-lg-3 col-md-4 col-6">
-                <a href="#" class="d-block mb-4 h-120">
+            <div class="col-lg-3 col-md-4 col-6 mb-4">
+                <a href="#" class="d-block">
                     <img class="img-fluid img-thumbnail"
-                        src="https://dev1.oderje.com/images/product/{{$product->p_image}}" alt="">
+                        src="https://app.oderje.com/images/product/{{$product->p_image}}" alt="">
                 </a>
-                <p>Name : {{$product->p_name}}</p>
-                <p>Price : {{'RM'.number_format($product->p_price / 100, 2)}}</p>
+                <span><b>{{$product->p_name}}</b></span><br>
+                <span><small>{{$product->store_name}}</small></span><br>
+                <span><small>{{$product->location}}</small></span><br>
+                <?php $ratingClass = "far fa-star"; ?>
+                @for ($i = 1; $i <= 5; $i++)
+                    @if($i <= $product->rating)
+                        <?php $ratingClass = "fas fa-star"; ?>
+                    @endif
+                <i class="{{ $ratingClass }} fa-xs"></i>
+                @endfor
+                <hr class="hr pb-0">
+                <span class="float-right price-text"><b>{{'RM'.number_format($product->p_price / 100, 2)}}</b></span>
             </div>
             @endforeach
         </div>
     </div>
 </div>
 @endsection
-
-@include('partials.navbtm')
 
 @section('extra-js')
 <!-- Scripts -->

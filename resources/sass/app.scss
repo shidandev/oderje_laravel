@@ -6,12 +6,18 @@
 
 // Components
 @import "components/media";
+@import "components/button";
+
+// Layouts
+@import "layout/navbtm";
 
 // Pages
 @import "pages/login";
+@import "pages/search";
 
 // Bootstrap
 // @import "~bootstrap/scss/bootstrap";
 
 // Font Awesome
 @import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";

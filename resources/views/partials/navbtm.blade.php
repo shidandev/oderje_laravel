@@ -1,4 +1,4 @@
-<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark d-md-none">
+<nav class="navbar fixed-bottom navbar-expand-md d-md-none navbtm">
     {{-- <a class="navbar-brand" href="#">Bottom navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -25,12 +25,18 @@
       </ul>
     </div> --}}
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{-- {{ config('app.name', '') }} --}}
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        {{-- <a class="navbar-brand" href="{{ url('/') }}">
+        {{ config('app.name', '') }}
+        </a> --}}
+        <ul class="navbar-nav ml-auto">
+            @guest
+            <a href="{{ route('login') }}" class="btn btn-light btn-sm" role="button" aria-pressed="true">Login</a>
+            @endguest
+        </ul>
+
+        {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,14 +47,15 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-                {{-- <li>
-                <a href="{{ route('users.edit') }}">My Account</a>
-                </li> --}}
+                <li>
+                    <a href="{{ route('users.edit') }}">My Account</a>
+                </li>
                 <!-- Authentication Links -->
                 @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
+
                 @if (Route::has('register'))
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -62,8 +69,8 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 
@@ -74,6 +81,6 @@
                 </li>
                 @endguest
             </ul>
-        </div>
+        </div> --}}
     </div>
 </nav>

@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@include('partials.nav')
-
 @section('content')
 {{-- <main class="py-4">
         @yield('content')
@@ -11,23 +9,25 @@
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-md-8 mt-2">
-                    <a href="{{ route('landing-page') }}"><img src="http://www.oderje.com/img/oderje-logo.png"
+                    <a href="{{ route('landing-page') }}"><img src="{{ asset('img/oderje-logo.png') }}"
                             class="img-fluid w-50 mt-5"></a>
                 </div>
             </div>
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6">
-                    <div class="input-group">
-                        <input id="search_str" type="text" class="form-control" placeholder="search"
-                            style="border-color:#FC9732">
-                        <div class="input-group-append">
-                            <button id="search-oderje" class="btn text-white" style="background:#FC9732" type="button">
-                                <i class="fas fa-search"></i>
-                            </button>
+                    <form action="/search" method="POST" role="search">
+                        {{ csrf_field() }}
+                        <div class="input-group">
+                            <input type="text" class="form-control search-input" name="query"
+                                placeholder="Search products">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn text-white search-button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <div class="form-group row">
-                        
                     </div>
                 </div>
             </div>
@@ -36,8 +36,6 @@
     </div>
 </main>
 @endsection
-
-@include('partials.navbtm')
 
 @section('extra-js')
 <!-- Scripts -->

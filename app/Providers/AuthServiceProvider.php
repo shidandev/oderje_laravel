@@ -21,18 +21,8 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    // public function boot()
-    // {
-    //     $this->registerPolicies();
-    // }
-
-    public function boot(GateContract $gate)
+    public function boot()
     {
-        $this->registerPolicies($gate);
-
-        // The code below sets up the 'api' driver
-        $this->app['auth']->extend('api', function() {
-            return new \App\Auth\ApiUserProvider();
-        });
+        $this->registerPolicies();
     }
 }

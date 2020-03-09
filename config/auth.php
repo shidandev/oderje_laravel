@@ -66,15 +66,10 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'api',
-            'model' => App\User::class,
+       'users' => [
+            'driver' => 'database',
+            'table' => 'users',
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
     ],
 
     /*
